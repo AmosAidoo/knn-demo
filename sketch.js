@@ -95,27 +95,5 @@ function draw() {
 function mousePressed() {
 	if ((mouseX < width && mouseX > 0) && (mouseY < height && mouseY > 20)) {
 		knn.addPoint(mouseX, mouseY, typeRadio.value())
-		console.log(typeRadio.value())
 	}
 }
-
-
-
-/* 
-	Brute force knn algorithm
-	Number of classes = 2
-	k will be taken as input
-
-
-	Datapoint{x,y,class}
-	Dataset=[Datapoints]
-	Closeness is going to be the euclidean distance, sqrt((x1-x2)^2 + (y1-y2)^2)
-	In drawing the decision boundary, we divide the whole screen into a grid and colour every cell
-	depending on how close the cell is to the datapoint
-
-	KNN {
-		Dataset
-		drawBoundary()
-		addPoint()
-	}
-*/
